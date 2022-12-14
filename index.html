@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@300;400;500;600;700;800;900&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Al-Riad Hrdioy</title>
+  </head>
+  <body
+    class="dark:bg-slate-900 dark:text-indigo-200 bg-slate-50 text-slate-700 relative"
+  >
+    <!-- navbar -->
+    <nav
+      class="wrapper sticky z-50 top-0 border-b-[1px] border-indigo-500/30 text-lg w-full backdrop-blur-2xl dark:md:bg-slate-800/70 dark:bg-slate-900/80 shadow-lg overflow-hidden md:overflow-visible"
+    >
+      <!-- Large Screen -->
+      <div class="hidden container md:flex justify-between items-center py-2">
+        <div class="logo">
+          <a href="#">
+            <img class="w-11" src="./images/icon.png" alt="logo" />
+          </a>
+        </div>
+
+        <div class="flex gap-10">
+          <ul class="flex items-center gap-6">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Credentials</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <div class="resume ml-4 flex items-center gap-6">
+            <div id="toggle_theme">
+              <span class="dark:hidden text-xl cursor-pointer text-slate-900">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
+                  ></path>
+                </svg>
+              </span>
+
+              <span
+                class="dark:inline hidden text-xl cursor-pointer text-yellow-200"
+                ><svg
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg
+              ></span>
+            </div>
+            <a
+              href="#"
+              class="bg-gradient-to-r from-indigo-500 to-indigo-600 text-slate-100 px-2 py-1 rounded-md hover:bg-sky-700 font-mono font-semibold"
+              >resume</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Small Screen -->
+      <div class="menu_height md:hidden py-2">
+        <div class="menu flex justify-between container">
+          <div class="logo">
+            <a href="#">
+              <img class="w-11" src="./images/icon.png" alt="logo" />
+            </a>
+          </div>
+          <div class="nav_right flex gap-5 items-center">
+            <div class="resume">
+              <a
+                href="#"
+                class="bg-gradient-to-r from-indigo-500 to-indigo-600 text-slate-100 px-2 py-1 rounded-md hover:bg-sky-700 font-mono font-semibold"
+                >resume</a
+              >
+            </div>
+
+            <div id="toggle_theme">
+              <span class="dark:hidden text-xl cursor-pointer text-slate-900">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
+                  ></path>
+                </svg>
+              </span>
+
+              <span
+                class="dark:inline hidden text-xl cursor-pointer text-yellow-200"
+                ><svg
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg
+              ></span>
+            </div>
+
+            <div class="menu_btn leading-none flex flex-col">
+              <span>--</span>
+              <span>--</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu_hide hidden flex-col gap-10 mt-5 pl-6">
+          <ul class="flex flex-col gap-6">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Credentials</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Home -->
+    <section class="home home_bg min-h-[35rem] overflow-hidden relative">
+      <div class="container h-full">
+        <!-- Background Gradient -->
+        <div class="bg_gradient">
+          <div
+            class="absolute left-[-28%] top-0 hidden h-[150px] w-[200px] rotate-45 rounded-3xl bg-gradient-to-l from-blue-600/60 to-indigo-500 opacity-20 blur-3xl filter dark:block dark:opacity-30 lg:top-44 lg:-right-20 lg:h-72 lg:w-[350px] xl:h-80 xl:w-[500px]"
+          ></div>
+          <div
+            class="absolute left-[28%] top-28 hidden rotate-12 rounded-3xl bg-indigo-800/50 opacity-90 blur-3xl filter dark:opacity-30 lg:h-32 lg:w-[450px] dark:lg:block xl:h-44 xl:w-[600px]"
+          ></div>
+          <div
+            class="absolute right-[-10%] bottom-2 hidden rotate-12 rounded-3xl bg-gradient-to-t from-blue-600/60 to-indigo-500/50 opacity-90 blur-3xl filter dark:opacity-30 lg:h-32 lg:w-[450px] dark:lg:block xl:h-44 xl:w-[600px]"
+          ></div>
+        </div>
+
+        <div class="h-full gap-5">
+          <div
+            class="self_info mt-20 flex justify-center items-center flex-col text-center md:flex-row md:text-start gap-10"
+          >
+            <div class="my_img relative">
+              <img
+                class="w-full max-w-[20rem] relative z-30 rounded-lg border-indigo-400 border-[1px]"
+                src="./images/mySelf.jpg"
+                alt="Hridoy"
+              />
+              <!-- Background Gradient -->
+              <div
+                class="absolute left-[-10%] top-28 hidden rotate-12 rounded-3xl bg-indigo-800/50 opacity-90 blur-3xl filter dark:opacity-50 lg:h-32 lg:w-[350px] dark:lg:block xl:h-44 xl:w-[400px]"
+              ></div>
+            </div>
+            <div class="texts leading-none flex flex-col gap-5">
+              <h1
+                class="text-[2rem] md:text-[3rem] lg:text-[5rem] font-semibold"
+              >
+                AL-RIAD HRIDOY
+              </h1>
+              <p class="dark:text-indigo-300">
+                I have patience and interest to learn new technologies
+              </p>
+              <div
+                class="social_icons flex gap-4 text-2xl justify-center md:justify-start items-center"
+              >
+                <div class="github">
+                  <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div class="linkedIn">
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="twitter">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="facebook">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section
+      class="about_bg about py-12 dark:border-none border-t-[1px] border-indigo-700 relative overflow-hidden"
+    >
+      <div
+        class="absolute left-[-10%] top-[50%] hidden rotate-12 rounded-3xl bg-indigo-800/50 opacity-90 blur-3xl filter dark:opacity-50 lg:h-32 lg:w-[350px] dark:lg:block xl:h-44 xl:w-[400px]"
+      ></div>
+      <div class="container">
+        <div class="header">
+          <h2>About</h2>
+        </div>
+        <div class="flex gap-4">
+          <i class="hidden md:inline fa-solid fa-arrow-right-long text-2xl"></i>
+          <div class="about_body">
+            <p class="text-[1.1rem] md:text-[1.3rem]">
+              I'm a self-taught Web Developer. I'm passionate about coding. I
+              have patience & interest to learn new things & technologies. I am
+              working on JavaScript, React.js, OOP, and Problem-solving
+              (HackerRank, Codeforces). I have finished more than 9 personal
+              projects using this technology. I'm always determined to achieve
+              my goals. I'm currently seeking an opportunity to build a
+              long-term profession as a Web Developer.
+            </p>
+
+            <div class="tech_stack mt-10 relative">
+              <h3>Tech_Stack</h3>
+              <div class="items mt-5 grid md:grid-cols-2 gap-y-8">
+                <div class="languages">
+                  <h4>Languages</h4>
+                  <div class="icons flex gap-3">
+                    <div class="js">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/javascript.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="py">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/python.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="c++">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/c++.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="html">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/html5.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="css">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/css3.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="css">
+                  <h4>CSS</h4>
+                  <div class="icons flex gap-3">
+                    <div class="tailwind">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/tailwind.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="sass">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/sass.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="version_control">
+                  <h4>Version Control</h4>
+                  <div class="icons flex gap-3">
+                    <div class="git">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/git.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="github">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/github.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="graphic_design">
+                  <h4>Graphic Design</h4>
+                  <div class="icons flex gap-3">
+                    <div class="photoshop">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/photoshop.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="illustrator">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/illustrator.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="canva">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/canva.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="figma">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/figma.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="others">
+                  <h4>Others</h4>
+                  <div class="icons flex gap-3">
+                    <div class="vs_code">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/vs_code.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="firebase">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/firebase.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute right-[-10%] hidden bottom-12 rotate-12 rounded-3xl bg-gradient-to-t from-blue-600/60 to-indigo-500/50 blur-3xl filter dark:opacity-40 lg:h-32 lg:w-[450px] dark:block h-20 w-[350px] xl:h-44 xl:w-[600px]"
+      ></div>
+    </section>
+    <!-- Tech_stack -->
+    <section class="tech_stack"></section>
+    <!-- Projects -->
+    <section class="projects"></section>
+    <!-- Credentials -->
+    <section class="credentials"></section>
+    <!-- Footer -->
+    <section class="footer"></section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

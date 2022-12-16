@@ -25,13 +25,23 @@ form.addEventListener("submit", (e) => {
 })
 
 // projects
+const body = document.querySelector("body");
+const preview = [...document.querySelectorAll(".preview")];
+const previewClose = [...document.querySelectorAll(".preview_close")];
+const projects = [...document.querySelectorAll(".single_project")];
 
-const projects = document.querySelectorAll(".single_project");
 
-
-
-[...projects].map((project) => {
+projects.map((project, index) => {
   project.addEventListener("click", () => {
-    console.log("clicked");
+    body.classList.add("overflow-hidden");
+    preview[index].classList.remove("hidden");
   });
 })
+previewClose.map((item, index) => {
+  item.addEventListener("click", () => {
+    body.classList.remove("overflow-hidden");
+    preview[index].classList.add("hidden");
+  });
+});
+
+

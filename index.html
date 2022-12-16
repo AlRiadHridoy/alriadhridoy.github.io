@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icon -->
+    <link rel="icon" href="./images/icon.png" type="image/gif" sizes="16x16" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,6 +42,7 @@
 
         <div class="flex gap-10">
           <ul class="flex items-center gap-6">
+            <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Credentials</a></li>
@@ -98,7 +101,7 @@
       </div>
       <!-- Small Screen -->
       <div class="menu_height md:hidden py-2">
-        <div class="menu flex justify-between container">
+        <div class="menu flex justify-between items-center container">
           <div class="logo">
             <a href="#">
               <img class="w-11" src="./images/icon.png" alt="logo" />
@@ -155,15 +158,17 @@
               ></span>
             </div>
 
-            <div class="menu_btn leading-none flex flex-col">
+            <div class="menu_btn leading-none flex flex-col gap-0">
+              <span>--</span>
               <span>--</span>
               <span>--</span>
             </div>
           </div>
         </div>
 
-        <div class="menu_hide hidden flex-col gap-10 mt-5 pl-6">
+        <div class="menu_hide hidden flex-col gap-10 mt-16 pl-6">
           <ul class="flex flex-col gap-6">
+            <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Credentials</a></li>
@@ -173,28 +178,28 @@
       </div>
     </nav>
     <!-- Home -->
-    <section class="home home_bg min-h-[35rem] overflow-hidden relative">
+    <section class="home home_bg overflow-hidden relative">
       <div class="container h-full">
         <!-- Background Gradient -->
         <div class="bg_gradient">
           <div
-            class="absolute left-[-28%] top-0 hidden h-[150px] w-[200px] rotate-45 rounded-3xl bg-gradient-to-l from-blue-600/60 to-indigo-500 opacity-20 blur-3xl filter dark:block dark:opacity-30 lg:top-44 lg:-right-20 lg:h-72 lg:w-[350px] xl:h-80 xl:w-[500px]"
+            class="absolute left-[5%] md:left-[-25%] top-0 hidden h-[150px] w-[200px] rotate-45 rounded-3xl bg-gradient-to-l from-blue-600/60 to-indigo-500 opacity-10 blur-3xl filter dark:block dark:opacity-30 lg:top-44 lg:-right-20 lg:h-72 lg:w-[350px] xl:h-80 xl:w-[500px]"
           ></div>
           <div
-            class="absolute left-[28%] top-28 hidden rotate-12 rounded-3xl bg-indigo-800/50 opacity-90 blur-3xl filter dark:opacity-30 lg:h-32 lg:w-[450px] dark:lg:block xl:h-44 xl:w-[600px]"
+            class="absolute left-[28%] top-28 hidden rotate-12 rounded-3xl bg-indigo-800/30 opacity-90 blur-3xl filter dark:opacity-30 lg:h-32 lg:w-[450px] dark:lg:block xl:h-44 xl:w-[600px]"
           ></div>
           <div
-            class="absolute right-[-10%] bottom-2 hidden rotate-12 rounded-3xl bg-gradient-to-t from-blue-600/60 to-indigo-500/50 opacity-90 blur-3xl filter dark:opacity-30 lg:h-32 lg:w-[450px] dark:lg:block xl:h-44 xl:w-[600px]"
+            class="absolute right-[-10%] hidden bottom-2 rotate-12 rounded-3xl bg-gradient-to-t from-blue-600/60 to-indigo-500/50 opacity-90 blur-3xl filter dark:opacity-30 h-20 w-[300px] lg:h-32 lg:w-[450px] xl:h-44 xl:w-[600px] dark:block"
           ></div>
         </div>
 
         <div class="h-full gap-5">
           <div
-            class="self_info mt-20 flex justify-center items-center flex-col text-center md:flex-row md:text-start gap-10"
+            class="self_info md:mt-12 md:mb-10 flex justify-center items-center flex-col text-center md:flex-row md:text-start gap-10"
           >
             <div class="my_img relative">
               <img
-                class="w-full max-w-[20rem] relative z-30 rounded-lg border-indigo-400 border-[1px]"
+                class="w-full max-w-[17rem] md:max-w-[20rem] relative z-30 rounded-lg border-indigo-400 border-[1px]"
                 src="./images/mySelf.jpg"
                 alt="Hridoy"
               />
@@ -402,15 +407,138 @@
         class="absolute right-[-10%] hidden bottom-12 rotate-12 rounded-3xl bg-gradient-to-t from-blue-600/60 to-indigo-500/50 blur-3xl filter dark:opacity-40 lg:h-32 lg:w-[450px] dark:block h-20 w-[350px] xl:h-44 xl:w-[600px]"
       ></div>
     </section>
-    <!-- Tech_stack -->
-    <section class="tech_stack"></section>
     <!-- Projects -->
-    <section class="projects"></section>
-    <!-- Credentials -->
-    <section class="credentials"></section>
-    <!-- Footer -->
-    <section class="footer"></section>
+    <section class="projects projects_bg">
+      <div class="container">
+        <div class="header">
+          <h2>Projects</h2>
+        </div>
+        <div class="projects_body mt-5 md:ml-6 grid grid-cols-2 gap-3 relative">
+          <div
+            class="single_project overflow-hidden rounded-xl cursor-pointer after:content-['Pixabix'] after:ml-0.5 after:text-indigo-100 after:text-3xl after:absolute after:bottom-3 h relative"
+          >
+            <img class="w-full" src="./images/projects/peakpx.jpg" alt="" />
+            <div class="shadow_bg absolute inset-0 img_bg"></div>
 
+            <div class="relative z-50">
+              <div
+                class="preview_overlay fixed top-0 left-0 bottom-0 right-0 bg-[rgba(0,0,0,.2)] backdrop-blur-sm cursor-pointer flex justify-center items-center"
+              ><h1 class="text-white text-7xl">Building...</h1></div>
+            </div>
+          </div>
+          <div class="single_project overflow-hidden rounded-xl">
+            <img class="w-full" src="./images/projects/peakpx.jpg" alt="" />
+          </div>
+          <div class="single_project overflow-hidden rounded-xl">
+            <img class="w-full" src="./images/projects/peakpx.jpg" alt="" />
+          </div>
+          <div class="single_project overflow-hidden rounded-xl">
+            <img class="w-full" src="./images/projects/peakpx.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Credentials -->
+    <!-- <section class="credentials"></section> -->
+    <!-- Contact -->
+    <section class="contact contact_bg relative">
+      <!-- Background Gradient -->
+      <div class="bg_gradient">
+        <div
+          class="absolute left-[5%] md:left-[-25%] top-0 hidden h-[150px] w-[200px] rotate-45 rounded-3xl bg-gradient-to-l from-blue-600/60 to-indigo-500 opacity-10 blur-3xl filter dark:md:block dark:hidden dark:opacity-30 lg:top-44 lg:-right-20 lg:h-72 lg:w-[350px] xl:h-80 xl:w-[500px]"
+        ></div>
+        <div
+          class="absolute right-[40%] top-0 hidden h-[150px] w-[200px] rotate-45 rounded-2xl bg-gradient-to-l from-blue-600/60 to-indigo-500/50 opacity-10 blur-3xl filter dark:block dark:opacity-10 lg:top-44 lg:h-72 lg:w-[350px] xl:h-80 xl:w-[500px]"
+        ></div>
+        <div
+          class="absolute right-[5%] lg:h-45 lg:w-[350px] xl:h-50 xl:w-[400px] bottom-28 hidden h-[150px] w-[200px] rotate-5 rounded-4xl bg-gradient-to-l from-blue-600/70 to-indigo-500 opacity-10 blur-3xl filter dark:block dark:opacity-10"
+        ></div>
+      </div>
+      <div class="container relative">
+        <div class="contact_header">
+          <h2>Contact</h2>
+        </div>
+        <div class="contact_body md:ml-6">
+          <div class="loc_info mt-3 flex items-center gap-2">
+            <h4>Bhairab, Kishoreganj,</h4>
+            <img class="w-6" src="./images/bangladesh.png" alt="Bangladesh" />
+          </div>
+          <div class="email mt-3">Email: alriadhridoy123@gmail.com</div>
+          <div class="contact_form mt-5 lg:w-[70%]">
+            <form class="flex flex-col gap-4 z-50">
+              <!-- Name -->
+              <div
+                class="flex items-center h-12 border border-indigo-300 rounded-md overflow-hidden"
+              >
+                <div
+                  class="h-full w-10 flex justify-center items-center select-none"
+                >
+                  <span class="person_icon"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                </div>
+                <input
+                  type="text"
+                  class="input w-full h-full border-none focus:outline-none bg-transparent placeholder:select-none"
+                  placeholder="Name"
+                  name="name"
+                  value=""
+                />
+              </div>
+              <!-- Email -->
+              <div
+                class="flex items-center h-12 border border-indigo-300 rounded-md overflow-hidden"
+              >
+                <div
+                  class="h-full w-10 flex justify-center items-center select-none"
+                >
+                  <span class="person_icon text-indigo-200"
+                    ><i class="fa-regular fa-envelope"></i
+                  ></span>
+                </div>
+                <input
+                  type="email"
+                  class="input w-full h-full border-none focus:outline-none bg-transparent placeholder:select-none"
+                  placeholder="Email"
+                  name="Email"
+                  value=""
+                />
+              </div>
+              <!-- Message -->
+              <div
+                class="flex items-center h-24 border border-indigo-300 rounded-md overflow-hidden"
+              >
+                <div
+                  class="h-full w-10 pt-3 flex justify-center items-center select-none"
+                >
+                  <span class="h-full select-none"
+                    ><i class="fa-solid fa-note-sticky"></i
+                  ></span>
+                </div>
+
+                <textarea
+                  class="input pt-3 w-full h-full resize-none border-none focus:outline-none bg-transparent placeholder:select-none"
+                  placeholder="Message"
+                  name="message"
+                ></textarea>
+              </div>
+
+              <!-- Button -->
+              <button
+                class="form_btn self-start flex justify-center items-center gap-3 bg-gradient-to-r from-indigo-500 to-indigo-600 text-slate-100 text-lg px-3 py-3 rounded-md hover:bg-sky-700 font-mono font-semibold"
+              >
+                <span fon>Send Message</span>
+                <div class="btn_icon">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <!-- <section class="footer"></section> -->
     <script src="./js/script.js"></script>
   </body>
 </html>

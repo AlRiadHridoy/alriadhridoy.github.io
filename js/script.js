@@ -8,8 +8,19 @@ function hideMenu() {
   menuHide.classList.toggle("hidden");
 }
 
+let navLinkHighlight = 0
+
 navLinks.map((link) => {
   link.addEventListener("click", function (e) {
+    // Add border
+    if (navLinkHighlight) {
+      navLinkHighlight.classList.remove("border-indigo-700")
+      navLinkHighlight.classList.add("border-transparent")
+    };
+    link.classList.remove("border-transparent")
+    link.classList.add("border-indigo-600");
+    navLinkHighlight = link
+
     hideMenu()
     lineToggle();
     e.preventDefault();
@@ -69,3 +80,7 @@ previewClose.map((item, index) => {
 
 
 
+// Contact
+document.querySelector(".form_btn").addEventListener("click", () => {
+  document.querySelector(".onSubmit").classList.remove("hidden")
+});

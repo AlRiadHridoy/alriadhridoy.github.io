@@ -23,6 +23,8 @@
     />
     <!-- Styles -->
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./css/aos.css" />
+
     <title>Al-Riad Hrdioy</title>
   </head>
   <body
@@ -41,15 +43,45 @@
         </div>
 
         <div class="flex gap-10">
-          <ul class="nav_links flex items-center gap-6">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#credentials">Credentials</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <ul class="nav_links flex items-center gap-2">
+            <li>
+              <a
+                class="px-2 py-1 rounded-md border-2 border-transparent"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="px-2 py-1 rounded-md border-2 border-transparent"
+                href="#about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="px-2 py-1 rounded-md border-2 border-transparent"
+                href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                class="px-2 py-1 rounded-md border-2 border-transparent"
+                href="#credentials"
+                >Credentials</a
+              >
+            </li>
+            <li>
+              <a
+                class="px-2 py-1 rounded-md border-2 border-transparent"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
           </ul>
 
-          <div class="resume ml-4 flex items-center gap-6">
+          <div class="ml-4 flex items-center gap-6">
             <div id="toggle_theme">
               <span class="dark:hidden text-xl cursor-pointer text-slate-500">
                 <svg
@@ -94,7 +126,7 @@
             <a
               download="alriadResume"
               href="./resume/alriadResume.pdf"
-              class="bg-gradient-to-r from-indigo-500 to-indigo-600 text-slate-100 px-2 py-1 rounded-md hover:bg-sky-700 font-mono font-semibold"
+              class="resume bg-gradient-to-r from-indigo-500 to-indigo-600 text-slate-100 px-2 py-1 rounded-md hover:bg-sky-700 font-mono font-semibold"
               >resume</a
             >
           </div>
@@ -319,7 +351,11 @@
 
               <div class="tech_stack mt-10 relative">
                 <h3>Tech_Stack</h3>
-                <div class="items mt-5 ml-6 grid md:grid-cols-2 gap-y-8">
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
+                  class="items mt-5 ml-6 grid md:grid-cols-2 gap-y-8"
+                >
                   <div class="languages">
                     <h4>Languages</h4>
                     <div class="icons flex gap-3">
@@ -755,6 +791,7 @@
               class="certificates mt-6 flex flex-col md:flex-row gap-4 md:gap-8"
             >
               <div
+                data-aos="zoom-in-up"
                 class="python overflow-hidden border border-indigo-200 dark:border-none"
               >
                 <a
@@ -769,6 +806,7 @@
                 </a>
               </div>
               <div
+                data-aos="zoom-in-up"
                 class="problem_solving overflow-hidden border border-indigo-200 dark:border-none"
               >
                 <a
@@ -871,6 +909,16 @@
                     name="message"
                   ></textarea>
                 </div>
+                <p class="onSubmit hidden mt-2">
+                  <span class="block md:inline-block text-red-600">Message not sent</span>
+                  <a
+                    href="https://facebook.com/alriadhridoy"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="hover:text-indigo-800 border-indigo-800 dark:hover:text-indigo-400 dark:border-indigo-400 border-b transition-all"
+                    >Try messaging me on Facebook</a
+                  >
+                </p>
 
                 <!-- Button -->
                 <button
@@ -927,9 +975,11 @@
       <!-- DEMO********************************************************* -->
       <!-- <div class="preview_overlay z-[999] fixed inset-0 bg-black/10 backdrop-blur-sm flex justify-center items-center"><h1 class="text-white text-7xl">Building...</h1></div> -->
     </div>
-    <script
-      src="./js/vendor/anime.min.js"
-    ></script>
+    <script src="./js/vendor/anime.min.js"></script>
+    <script src="./js/vendor/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./js/anime.js"></script>
     <script src="./js/script.js"></script>
   </body>

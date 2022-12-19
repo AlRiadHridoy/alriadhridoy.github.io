@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icon -->
+    <link rel="icon" href="./images/icon.png" type="image/gif" sizes="16x16" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:wght@300;400;500;600;700;800;900&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Al-Riad Hrdioy</title>
+  </head>
+  <body
+    class="dark:bg-slate-900 dark:text-indigo-200 bg-slate-50 text-slate-700"
+  >
+    <!-- navbar -->
+    <nav
+      class="wrapper sticky z-50 top-0 border-b-[1px] border-indigo-500/30 text-lg w-full backdrop-blur-2xl dark:md:bg-slate-800/70 dark:bg-slate-900/80 shadow-lg overflow-hidden md:overflow-visible"
+    >
+      <!-- Large Screen -->
+      <div class="hidden container md:flex justify-between items-center py-2">
+        <div class="logo">
+          <a href="#">
+            <img class="w-11" src="./images/icon.png" alt="logo" />
+          </a>
+        </div>
+
+        <div class="flex gap-10">
+          <ul class="flex items-center gap-6">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Credentials</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <div class="resume ml-4 flex items-center gap-6">
+            <div id="toggle_theme">
+              <span class="dark:hidden text-xl cursor-pointer text-slate-900">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
+                  ></path>
+                </svg>
+              </span>
+
+              <span
+                class="dark:inline hidden text-xl cursor-pointer text-yellow-200"
+                ><svg
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg
+              ></span>
+            </div>
+            <a
+              href="#"
+              class="bg-gradient-to-r from-indigo-500 to-indigo-600 text-slate-100 px-2 py-1 rounded-md hover:bg-sky-700 font-mono font-semibold"
+              >resume</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Small Screen -->
+      <div class="menu_height md:hidden py-2 relative">
+        <div class="menu flex justify-between items-center container">
+          <div class="logo">
+            <a href="#">
+              <img class="w-11" src="./images/icon.png" alt="logo" />
+            </a>
+          </div>
+          <div class="nav_right flex gap-5 items-center">
+            <div class="resume">
+              <a
+                href="#"
+                class="bg-gradient-to-r from-indigo-500 to-indigo-600 text-slate-100 px-2 py-1 rounded-md hover:bg-sky-700 font-mono font-semibold"
+                >resume</a
+              >
+            </div>
+
+            <div id="toggle_theme">
+              <span class="dark:hidden text-xl cursor-pointer text-slate-900">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"
+                  ></path>
+                </svg>
+              </span>
+
+              <span
+                class="dark:inline hidden text-xl cursor-pointer text-yellow-200"
+                ><svg
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg
+              ></span>
+            </div>
+
+            <div class="menu_btn leading-none flex flex-col gap-0">
+              <span>--</span>
+              <span>--</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu_hide hidden flex-col mt-10 pl-6">
+          <ul class="flex flex-col gap-3">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Credentials</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="main min-h-[calc(100vh)]">
+<!-- Home -->
+    <section class="home home_bg overflow-hidden relative">
+      <div class="container h-full">
+        <!-- Background Gradient -->
+        <div class="bg_gradient">
+          <div
+            class="absolute left-[5%] md:left-[-25%] top-0 hidden h-[150px] w-[200px] rotate-45 rounded-3xl bg-gradient-to-l from-blue-600/60 to-indigo-500 opacity-10 blur-3xl filter dark:block dark:opacity-30 lg:top-44 lg:-right-20 lg:h-72 lg:w-[350px] xl:h-80 xl:w-[500px]"
+          ></div>
+          <div
+            class="absolute left-[28%] top-28 hidden rotate-12 rounded-3xl bg-indigo-800/30 opacity-90 blur-3xl filter dark:opacity-30 lg:h-32 lg:w-[450px] dark:lg:block xl:h-44 xl:w-[600px]"
+          ></div>
+          <div
+            class="absolute right-[-10%] hidden bottom-2 rotate-12 rounded-3xl bg-gradient-to-t from-blue-600/60 to-indigo-500/50 opacity-90 blur-3xl filter dark:opacity-30 h-20 w-[300px] lg:h-32 lg:w-[450px] xl:h-44 xl:w-[600px] dark:block"
+          ></div>
+        </div>
+
+        <div class="h-full gap-5">
+          <div
+            class="self_info md:mt-12 md:mb-10 flex justify-center items-center flex-col text-center md:flex-row md:text-start gap-10"
+          >
+            <div class="my_img relative">
+              <img
+                class="w-full max-w-[17rem] md:max-w-[20rem] relative z-30 rounded-lg border-indigo-400 border-[1px]"
+                src="./images/mySelf.jpg"
+                alt="Hridoy"
+              />
+              <!-- Background Gradient -->
+              <div
+                class="absolute left-[-10%] top-28 hidden rotate-12 rounded-3xl bg-indigo-800/50 opacity-90 blur-3xl filter dark:opacity-50 lg:h-32 lg:w-[350px] dark:lg:block xl:h-44 xl:w-[400px]"
+              ></div>
+            </div>
+            <div class="texts leading-none flex flex-col gap-5">
+              <h1
+                class="text-3xl sm:text-4xl md:text-[3rem] lg:text-[5rem] font-semibold"
+              >
+                AL-RIAD HRIDOY
+              </h1>
+              <p class="dark:text-indigo-300 md:text-lg">
+                I have patience and interest to learn new technologies
+              </p>
+              <div
+                class="social_icons flex gap-4 text-3xl justify-center md:justify-start items-center"
+              >
+                <div class="github">
+                  <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div class="linkedIn">
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="twitter">
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="facebook">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="showwcase">
+                  <a
+                    href="http://www.showwcase.com/alriadhridoy"
+                    target="_blank"
+                    ><img
+                      class="w-9 border dark:border-indigo-500 rounded-full"
+                      src="./images/showwcase.png"
+                      alt="showwcase"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About -->
+    <section
+      class="about_bg about dark:border-none border-t-[1px] border-indigo-700 relative overflow-hidden"
+    >
+      <div
+        class="absolute left-[-10%] top-[50%] hidden rotate-12 rounded-3xl bg-indigo-800/50 opacity-90 blur-3xl filter dark:opacity-50 lg:h-32 lg:w-[350px] dark:lg:block xl:h-44 xl:w-[400px]"
+      ></div>
+      <div class="container">
+        <div class="header">
+          <h2>About</h2>
+        </div>
+        <div class="flex gap-4">
+          <i class="hidden md:inline fa-solid fa-arrow-right-long text-2xl"></i>
+          <div class="about_body">
+            <p class="text-[1.1rem] md:text-[1.3rem]">
+              I'm a self-taught Web Developer. I'm passionate about coding. I
+              have patience & interest to learn new things & technologies. I am
+              working on JavaScript, React.js, OOP, and Problem-solving
+              (HackerRank, Codeforces). I have finished more than 9 personal
+              projects using this technology. I'm always determined to achieve
+              my goals. I'm currently seeking an opportunity to build a
+              long-term profession as a Web Developer.
+            </p>
+
+            <div class="tech_stack mt-10 relative">
+              <h3>Tech_Stack</h3>
+              <div class="items mt-5 grid md:grid-cols-2 gap-y-8">
+                <div class="languages">
+                  <h4>Languages</h4>
+                  <div class="icons flex gap-3">
+                    <div class="js">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/javascript.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="py">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/python.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="c++">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/c++.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="html">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/html5.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="css">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/css3.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="css">
+                  <h4>CSS</h4>
+                  <div class="icons flex gap-3">
+                    <div class="tailwind">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/tailwind.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="sass">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/sass.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="version_control">
+                  <h4>Version Control</h4>
+                  <div class="icons flex gap-3">
+                    <div class="git">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/git.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="github">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/github.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="graphic_design">
+                  <h4>Graphic Design</h4>
+                  <div class="icons flex gap-3">
+                    <div class="photoshop">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/photoshop.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="illustrator">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/illustrator.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="canva">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/canva.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="figma">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/figma.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="others">
+                  <h4>Others</h4>
+                  <div class="icons flex gap-3">
+                    <div class="vs_code">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/vs_code.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="firebase">
+                      <img
+                        class="w-12"
+                        src="./images/tech_icons/firebase.svg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute right-[-10%] hidden bottom-12 rotate-12 rounded-3xl bg-gradient-to-t from-blue-600/60 to-indigo-500/50 blur-3xl filter dark:opacity-40 lg:h-32 lg:w-[450px] dark:block h-20 w-[350px] xl:h-44 xl:w-[600px]"
+      ></div>
+    </section>
+    <!-- Projects -->
+    <section class="projects projects_bg">
+      <div class="container">
+        <div class="header">
+          <h2>Projects</h2>
+        </div>
+        <div class="projects_body mt-5 md:ml-6 relative">
+          <div class="projects_overview grid md:grid-cols-2 gap-y-4 md:gap-x-6">
+            <!-- Pixabix -->
+            <div
+              class="single_project overflow-hidden mx-w-[100] rounded-xl cursor-pointer after:content-['Pixabix'] after:ml-0.5 after:text-indigo-100 after:text-3xl after:absolute after:bottom-3 h relative"
+            >
+              <img
+                class="w-full small_img"
+                src="./images/projects/pixabix_small.png"
+                alt=""
+              />
+              <div class="shadow_bg absolute inset-0 img_bg"></div>
+            </div>
+            <!-- Benji -->
+            <div
+              class="single_project overflow-hidden mx-w-[100] rounded-xl cursor-pointer after:content-['Benji'] after:ml-0.5 after:text-indigo-100 after:text-3xl after:absolute after:bottom-3 h relative"
+            >
+              <img
+                class="w-full small_img"
+                src="./images/projects/benji_small.png"
+                alt=""
+              />
+              <div class="shadow_bg absolute inset-0 img_bg"></div>
+            </div>
+          </div>
+          <!-- Previews -->
+          <div class="previews">
+            <!-- Pixabix -->
+            <div class="preview hidden relative z-50">
+              <div
+                class="fixed top-0 left-0 bottom-0 right-0 bg-[rgba(0,0,0,.6)] backdrop-blur-sm"
+              >
+                <div class="floating_project mt-3">
+                  <div class="preview_close cursor-pointer text-end w-full">
+                    <span class="pr-6 md:py-5 text-indigo-50">close</span>
+                  </div>
+                  <div
+                    class="conent preview_bg bg-slate-900 py-4 fixed left-0 right-0 bottom-0 top-12 overflow-y-scroll"
+                  >
+                    <div class="container">
+                      <div class="name border-b-2 border-indigo-900">
+                        <h2>Pixabix</h2>
+                      </div>
+                      <ul class="mt-6 text-indigo-200">
+                        <li>
+                          <span
+                            ><i class="fa-regular fa-hand-point-right"></i
+                          ></span>
+                          Pixabix is a responsive website with an awesome user
+                          interface.
+                        </li>
+                        <li>
+                          <span
+                            ><i class="fa-regular fa-hand-point-right"></i
+                          ></span>
+                          User can search photos & download in two different
+                          resolutions.
+                        </li>
+                        <li>
+                          <span
+                            ><i class="fa-regular fa-hand-point-right"></i
+                          ></span>
+                          All the photo fetched from “Pixabay” API.
+                        </li>
+                        <li>
+                          <span
+                            ><i class="fa-regular fa-hand-point-right"></i
+                          ></span>
+                          hen a user scrolls to bottom of the search page, new
+                          photo section will come with 10 new images.
+                        </li>
+                      </ul>
+
+                      <div
+                        class="technologies mt-4 flex items-center flex-wrap gap-2"
+                      >
+                        <h4 class="text-xl">Technologies:</h4>
+                        <ul
+                          class="flex items-center gap-2 mt-1 ml-3 md:ml-0 flex-wrap"
+                        >
+                          <li
+                            class="px-2 py-1 border border-indigo-600 border-opacity-50 rounded-lg"
+                          >
+                            React
+                          </li>
+                          <li
+                            class="px-2 py-1 border border-indigo-600 border-opacity-50 rounded-lg"
+                          >
+                            javascript
+                          </li>
+                          <li
+                            class="px-2 py-1 border border-indigo-600 border-opacity-50 rounded-lg"
+                          >
+                            TailwindCSS
+                          </li>
+                          <li
+                            class="px-2 py-1 border border-indigo-600 border-opacity-50 rounded-lg"
+                          >
+                            CSS
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="links mt-5 text-lg">
+                        <div class="repo">
+                          <button
+                            class="px-2 py-1 bg-indigo-600 text-indigo-50 rounded-md"
+                          >
+                            <a
+                              href="http://github.com/alriadhridoy/pixabix"
+                              target="_blank"
+                              >Github <i class="fa-solid fa-code"></i
+                            ></a>
+                          </button>
+                          <button
+                            class="px-2 py-1 bg-gradient-to-r from-indigo-500 to-indigo-600 text-indigo-50 rounded-md"
+                          >
+                            <a href="http://pixabix.netlify.app" target="_blank"
+                              >Live
+                              <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                              ></i
+                            ></a>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="project_img mt-6">
+                        <img
+                          class="w-full border-4 border-indigo-600"
+                          src="./images/projects/pixaibix_big.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Benji -->
+            <div class="preview hidden relative z-50">
+              <div
+                class="fixed top-0 left-0 bottom-0 right-0 bg-[rgba(0,0,0,.6)] backdrop-blur-sm"
+              >
+                <div class="floating_project mt-3">
+                  <div class="preview_close cursor-pointer text-end w-full">
+                    <span class="pr-6 md:py-5 text-indigo-50">close</span>
+                  </div>
+                  <div
+                    class="conent preview_bg bg-slate-900 py-4 fixed left-0 right-0 bottom-0 top-12 overflow-y-scroll"
+                  >
+                    <div class="container">
+                      <div class="name border-b-2 border-indigo-900">
+                        <h2>Benji</h2>
+                      </div>
+                      <ul class="mt-6 text-indigo-200">
+                        <li>
+                          <span
+                            ><i class="fa-regular fa-hand-point-right"></i
+                          ></span>
+                          Benji is a responsive NFT static website.
+                        </li>
+                        <li>
+                          <span
+                            ><i class="fa-regular fa-hand-point-right"></i
+                          ></span>
+                          It has very cute UI. This site created for a client
+                          (Fiverr).
+                        </li>
+                      </ul>
+
+                      <div
+                        class="technologies mt-4 flex items-center flex-wrap gap-2"
+                      >
+                        <h4 class="text-xl">Technologies:</h4>
+                        <ul
+                          class="flex items-center gap-2 mt-1 ml-3 md:ml-0 flex-wrap"
+                        >
+                          <li
+                            class="px-2 py-1 border border-indigo-600 border-opacity-50 rounded-lg"
+                          >
+                            HTML
+                          </li>
+                          <li
+                            class="px-2 py-1 border border-indigo-600 border-opacity-50 rounded-lg"
+                          >
+                            Javascript
+                          </li>
+                          <li
+                            class="px-2 py-1 border border-indigo-600 border-opacity-50 rounded-lg"
+                          >
+                            SASS
+                          </li>
+                          <li
+                            class="px-2 py-1 border border-indigo-600 border-opacity-50 rounded-lg"
+                          >
+                            CSS
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="links mt-5 text-lg">
+                        <div class="repo">
+                          <button
+                            class="px-2 py-1 bg-indigo-600 text-indigo-50 rounded-md"
+                          >
+                            <a
+                              href="http://github.com/alriadridoy/benji"
+                              target="_blank"
+                              >Github <i class="fa-solid fa-code"></i
+                            ></a>
+                          </button>
+                          <button
+                            class="px-2 py-1 bg-gradient-to-r from-indigo-500 to-indigo-600 text-indigo-50 rounded-md"
+                          >
+                            <a
+                              href="http://alriadhridoy.github.io/benji"
+                              target="_blank"
+                              >Live
+                              <i
+                                class="fa-solid fa-arrow-up-right-from-square"
+                              ></i
+                            ></a>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="project_img mt-6">
+                        <img
+                          class="w-full border-4 border-indigo-600"
+                          src="./images/projects/benji_big.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Credentials -->
+    <section class="credentials credentials_bg">
+      <div class="container">
+        <div class="header">
+          <h2>Credentials</h2>
+        </div>
+
+        <div class="credentials_body md:ml-6">
+          <div
+            class="certificates mt-6 flex flex-col md:flex-row gap-4 md:gap-8"
+          >
+            <div class="python overflow-hidden">
+              <a
+                href="https://www.hackerrank.com/certificates/6c70bfda4fe6"
+                target="_blank"
+              >
+                <img
+                  class="transition duration-200 ease-out scale-100 hover:scale-125"
+                  src="./images//credentials/python.png"
+                  alt="Python Certificate"
+                />
+              </a>
+            </div>
+            <div class="problem_solving overflow-hidden">
+              <a
+                href="https://www.hackerrank.com/certificates/802d7e976170"
+                target="_blank"
+              >
+                <img
+                  class="transition duration-200 ease-out scale-100 hover:scale-125"
+                  src="./images//credentials/problem_solving.png"
+                  alt="Problem Solving Certificate"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section class="contact contact_bg relative">
+      <!-- Background Gradient -->
+      <div class="bg_gradient">
+        <div
+          class="absolute left-[5%] md:left-[-25%] top-0 hidden h-[150px] w-[200px] rotate-45 rounded-3xl bg-gradient-to-l from-blue-600/60 to-indigo-500 opacity-10 blur-3xl filter dark:md:block dark:hidden dark:opacity-30 lg:top-44 lg:-right-20 lg:h-72 lg:w-[350px] xl:h-80 xl:w-[500px]"
+        ></div>
+        <div
+          class="absolute right-[40%] top-0 hidden h-[150px] w-[200px] rotate-45 rounded-2xl bg-gradient-to-l from-blue-600/60 to-indigo-500/50 opacity-10 blur-3xl filter dark:block dark:opacity-10 lg:top-44 lg:h-72 lg:w-[350px] xl:h-80 xl:w-[500px]"
+        ></div>
+        <div
+          class="absolute right-[5%] lg:h-45 lg:w-[350px] xl:h-50 xl:w-[400px] bottom-28 hidden h-[150px] w-[200px] rotate-5 rounded-4xl bg-gradient-to-l from-blue-600/70 to-indigo-500 opacity-10 blur-3xl filter dark:block dark:opacity-10"
+        ></div>
+      </div>
+      <div class="container relative">
+        <div class="contact_header">
+          <h2>Contact</h2>
+        </div>
+        <div class="contact_body md:ml-6">
+          <div class="loc_info mt-3 flex items-center gap-2">
+            <h4>Bhairab, Kishoreganj, Dhaka,</h4>
+            <img class="w-6" src="./images/bangladesh.png" alt="Bangladesh" />
+          </div>
+          <div class="email mt-3">Email: alriadhridoy123@gmail.com</div>
+          <div class="contact_form mt-5 lg:w-[70%]">
+            <form class="flex flex-col gap-4 z-50">
+              <!-- Name -->
+              <div
+                class="flex items-center h-12 border border-indigo-300 rounded-md overflow-hidden"
+              >
+                <div
+                  class="h-full w-10 flex justify-center items-center select-none"
+                >
+                  <span class="person_icon"
+                    ><i class="fa-solid fa-user"></i
+                  ></span>
+                </div>
+                <input
+                  type="text"
+                  class="input w-full h-full border-none focus:outline-none bg-transparent placeholder:select-none"
+                  placeholder="Name"
+                  name="name"
+                  value=""
+                />
+              </div>
+              <!-- Email -->
+              <div
+                class="flex items-center h-12 border border-indigo-300 rounded-md overflow-hidden"
+              >
+                <div
+                  class="h-full w-10 flex justify-center items-center select-none"
+                >
+                  <span class="person_icon text-indigo-200"
+                    ><i class="fa-regular fa-envelope"></i
+                  ></span>
+                </div>
+                <input
+                  type="email"
+                  class="input w-full h-full border-none focus:outline-none bg-transparent placeholder:select-none"
+                  placeholder="Email"
+                  name="Email"
+                  value=""
+                />
+              </div>
+              <!-- Message -->
+              <div
+                class="flex items-center h-24 border border-indigo-300 rounded-md overflow-hidden"
+              >
+                <div
+                  class="h-full w-10 pt-3 flex justify-center items-center select-none"
+                >
+                  <span class="h-full select-none"
+                    ><i class="fa-solid fa-note-sticky"></i
+                  ></span>
+                </div>
+
+                <textarea
+                  class="input pt-3 w-full h-full resize-none border-none focus:outline-none bg-transparent placeholder:select-none"
+                  placeholder="Message"
+                  name="message"
+                ></textarea>
+              </div>
+
+              <!-- Button -->
+              <button
+                class="form_btn self-start flex justify-center items-center gap-3 bg-gradient-to-r from-indigo-500 to-indigo-600 text-slate-100 text-lg px-3 py-3 rounded-md hover:bg-sky-700 font-mono font-semibold"
+              >
+                <span fon>Send Message</span>
+                <div class="btn_icon">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer footer_bg py-2">
+      <div class="container">
+        <div class="footer_body flex flex-col items-center gap-2">
+          <div
+            class="social_icons flex gap-4 text-xl justify-center md:justify-start items-center"
+          >
+            <div class="github">
+              <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="linkedIn">
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="twitter">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="facebook">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+          </div>
+          <div class="copyright text-center flex items-center justify-center gap-2">
+            <div>Copy anything you want</div>
+            <div class=" inline-block mt-[-10px] border-b border-indigo-200 rounded-3xl"><span class=" text-pink-700">.</span><span class=" text-blue-400">.</span></div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- DEMO********************************************************* -->
+    <!-- <div class="preview_overlay z-[999] fixed inset-0 bg-black/10 backdrop-blur-sm flex justify-center items-center"><h1 class="text-white text-7xl">Building...</h1></div> -->
+    </div>
+    
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
